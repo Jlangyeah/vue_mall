@@ -1,0 +1,121 @@
+{
+  "id": "2270893",
+  "name": "mall",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5211751",
+      "name": "正品",
+      "font_class": "zhengpin",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "7160378",
+      "name": "退货",
+      "font_class": "tuihuo",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "7992687",
+      "name": "包邮",
+      "font_class": "baoyou",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "18859568",
+      "name": "订单完成",
+      "font_class": "dingdanwancheng",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "18910451",
+      "name": "购物车",
+      "font_class": "qicheqianlian-select-copy",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "11765992",
+      "name": "空购物车",
+      "font_class": "konggouwuche",
+      "unicode": "e794",
+      "unicode_decimal": 59284
+    },
+    {
+      "icon_id": "163432",
+      "name": "邮箱",
+      "font_class": "svg17",
+      "unicode": "e838",
+      "unicode_decimal": 59448
+    },
+    {
+      "icon_id": "4282713",
+      "name": "姓名",
+      "font_class": "xingming",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "9791225",
+      "name": "身份证",
+      "font_class": "credentials_icon",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "17470572",
+      "name": "手机",
+      "font_class": "shouji",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "2765881",
+      "name": "大学",
+      "font_class": "daxue",
+      "unicode": "e752",
+      "unicode_decimal": 59218
+    },
+    {
+      "icon_id": "8068441",
+      "name": "考试",
+      "font_class": "kaoshi",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "8752491",
+      "name": "文具",
+      "font_class": "wenju",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "10450517",
+      "name": "听名著",
+      "font_class": "tingmingzhu",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "10178808",
+      "name": "用户",
+      "font_class": "yonghu",
+      "unicode": "e7e6",
+      "unicode_decimal": 59366
+    },
+    {
+      "icon_id": "15252726",
+      "name": "密 码",
+      "font_class": "mima",
+      "unicode": "e89f",
+      "unicode_decimal": 59551
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+import Vue from 'vue'
+import { Button, Message, container, Header, Aside, Main, Menu, Submenu, MenuItem, Radio, Row, Col, Upload, Avatar, Backtop, InputNumber, Breadcrumb, BreadcrumbItem, Table, TableColumn, MessageBox, Dialog, Pagination, Checkbox, Step, Steps, Tooltip, Select, Option, Cascader, Card } from 'element-ui'
+
+Vue.use(Button)
+Vue.use(container)
+Vue.use(Header)
+Vue.use(Aside)
+Vue.use(Main)
+Vue.use(Menu)
+Vue.use(Submenu)
+Vue.use(MenuItem)
+Vue.use(Radio)
+Vue.use(Row)
+Vue.use(Col)
+Vue.use(Upload)
+Vue.use(Avatar)
+Vue.use(Backtop)
+Vue.use(InputNumber)
+Vue.use(Breadcrumb)
+Vue.use(BreadcrumbItem)
+Vue.use(Table)
+Vue.use(TableColumn)
+Vue.use(Dialog)
+Vue.use(Pagination)
+Vue.use(Checkbox)
+Vue.use(Step)
+Vue.use(Steps)
+Vue.use(Tooltip)
+Vue.use(Select)
+Vue.use(Option)
+Vue.use(Cascader)
+Vue.use(Card)
+//把弹框组件挂载到Vue的原型对象上
+Vue.prototype.$message = Message
+Vue.prototype.$confirm = MessageBox.confirm

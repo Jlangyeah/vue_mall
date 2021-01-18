@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="./js/vue.js"></script>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<body>
+    <div id="app">
+        筛选：<input type="text" v-model="key">
+        <table border="1" cellspacing="0" cellpadding="10">
+            <tr>
+                <th>
+                    <input type="checkbox" v-model="all" @change="checkAll()">
+                </th>
+                <th>id</th>
+                <th>书籍名称</th>
+                <th>出版日期</th>
+                <th>购买价格</th>
+                <th>数量</th>
+                <th>操作</th>
+            </tr>
+            <tr v-for="(item,index) in flist" :key="item.id">
+                <td style="text-align: center;"><input type="checkbox" v-model="item.sel"></td>
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.time}}</td>
+                <td>{{item.price|prices}}</td>
+                <td><button @click="item.num--" :disabled="item.num==1">-</button>{{item.num}}<button
+                        @click="item.num++">+</button></td>
+                <td><button @click="delItem(item.id)">移除</button></td>
+            </tr>
+            <tr>
+                <td colspan="7">总价格:{{total.price|prices}} 选择数量:{{total.num}}</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                key: "",
+                all: true,
+                list: [
+                    { id: 1, name: "小红书", time: "2018-8", price: 188.99, num: 1, sel: true },
+                    { id: 2, name: "小烂熟", time: "2019-8", price: 88.9, num: 1, sel: true },
+                    { id: 3, name: "小绿树", time: "2017-5", price: 133.00, num: 1, sel: true },
+                    { id: 4, name: "发生的树", time: "2020-1", price: 68.80, num: 1, sel: true },
+                    { id: 5, name: "奥古", time: "2015-4", price: 555.50, num: 1, sel: true },
+                ]
+            },
+            methods: {
+                delItem(item) {
+                    var falg = window.confirm("确定要删除吗？");
+                    if (falg) {
+                        this.list.splice(item - 1, 1)
+                    }
+
+                },
+                checkAll() {
+                    this.list.forEach(item => item.sel = this.all)
+                }
+            },
+            watch: {
+                list: {
+                    handler: function () {
+                        this.all = this.list.every(item => item.sel)
+                    },
+                    deep: true
+                }
+            },
+            computed: {
+                total: function () {
+                    var price = 0;
+                    var num = 0;
+                    this.list.forEach(item => {
+                        if (item.sel) {
+                            price += item.num * item.price
+                            num += item.num * 1
+
+                        }
+                    })
+                    return ({ price, num })
+                },
+                flist: function () {
+                    if (this.key === '') { return this.list }
+                    return this.list.filter(item => item.name.includes(this.key))
+                }
+            },
+            filters: {
+                prices: function (val, fix = 2) {
+                    val = val.toFixed(fix)
+                    val = "" + val
+                    return "￥" + val
+                }
+            },
+
+
+        })
+    </script>
+</body>
+
+</html>
